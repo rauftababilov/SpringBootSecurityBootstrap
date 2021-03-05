@@ -142,7 +142,7 @@
 
         <div class="form-group">
             <label>Password</label>
-                <input type="password" name="passwordEdit" class="form-control">
+                <input type="password" name="passwordEdit" class="form-control" th:value="${user.password}">
         </div>
 
         <div class="form-group">
@@ -222,10 +222,7 @@ aria-labelledby="TitleModalLabel2" aria-hidden="true">
             <div class="form-group">
                 <label for="ageDeleteUser">Age</label>
                 <div>
-                    <input type="number" readonly
-                           name="ageDelete"
-                           class="form-control"
-                           id="ageDeleteUser"
+                    <input type="number" readonly name="ageDelete" class="form-control" id="ageDeleteUser"
                            th:value="${user.age}">
                 </div>
             </div>
@@ -233,10 +230,7 @@ aria-labelledby="TitleModalLabel2" aria-hidden="true">
             <div class="form-group">
                 <label for="emailDeleteUser">Email</label>
                 <div>
-                    <input type="email" readonly
-                           name="emailDelete"
-                           class="form-control"
-                           id="emailDeleteUser"
+                    <input type="email" readonly name="emailDelete" class="form-control" id="emailDeleteUser"
                            aria-describedby="emailHelp"
                            th:value="${user.email}">
                 </div>
@@ -252,10 +246,7 @@ aria-labelledby="TitleModalLabel2" aria-hidden="true">
             <div class="form-group">
                 <label for="roleDeleteUser">Role</label>
                 <div>
-                    <select class="form-control"
-                            size="2" readonly
-                            name="deleteRole"
-                            id="roleDeleteUser">
+                    <select class="form-control" size="2" readonly name="deleteRole" id="roleDeleteUser">
                         <option th:each="role : ${allRoles}" th:value="${role}" th:text="${role.role}"></option>
                     </select>
                 </div>
